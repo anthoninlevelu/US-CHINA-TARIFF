@@ -16,3 +16,5 @@ df['Product_HS6'] = df['Product_HS6'].astype(int)
 
 merged_df= pd.merge(left=df, right=Doc_2018_No05_07, how='outer', left_on='Product_HS6', right_on='Doc_2018_No05_07')
 merged_df[]
+
+
