@@ -118,10 +118,81 @@ Twelfth = df.pivot_table(index=['Doc_2019_No03_+5percent since June 2019'], aggf
 Twelfth = pd.DataFrame(Twelfth)
 Twelfth.columns = ['Doc_2019_No03_+5percent since June 2019_N']
 Twelfth.reset_index(inplace=True)
-Twelfth["Doc_2019_No03_+5percent since June 2019_tariff"] = +5
+Twelfth["Doc_2019_No03_+5percent since June 2019_tariff"] = 5
 Twelfth["Doc_2019_No03_+5percent since June 2019_sumtariff"] = Twelfth["Doc_2019_No03_+5percent since June 2019_N"]*Twelfth["Doc_2019_No03_+5percent since June 2019_tariff"]
 
 merged_df = pd.merge(left=merged_df, right=Twelfth, how='outer', left_on='Product_HS6', right_on='Doc_2019_No03_+5percent since June 2019')
 merged_df["Doc_2019_No03_+5percent since June 2019_average"] = merged_df["Doc_2019_No03_+5percent since June 2019_sumtariff"]/merged_df['TotalTariffLines']
 
+Thirteenth = df.pivot_table(index=['Doc_2019_No03_+10percent since June 2019'], aggfunc='size')
+Thirteenth = pd.DataFrame(Thirteenth)
+Thirteenth.columns = ['Doc_2019_No03_+10percent since June 2019_N']
+Thirteenth.reset_index(inplace=True)
+Thirteenth["Doc_2019_No03_+10percent since June 2019_tariff"] = 10
+Thirteenth["Doc_2019_No03_+10percent since June 2019_sumtariff"] = Thirteenth["Doc_2019_No03_+10percent since June 2019_N"]*Thirteenth["Doc_2019_No03_+10percent since June 2019_tariff"]
 
+merged_df = pd.merge(left=merged_df, right=Thirteenth, how='outer', left_on='Product_HS6', right_on='Doc_2019_No03_+10percent since June 2019')
+merged_df["Doc_2019_No03_+10percent since June 2019_average"] = merged_df["Doc_2019_No03_+10percent since June 2019_sumtariff"]/merged_df['TotalTariffLines']
+
+
+Fourteenth = df.pivot_table(index=['Doc_2019_No03_+20percent since June 2019 (1)'], aggfunc='size')
+Fourteenth = pd.DataFrame(Fourteenth)
+Fourteenth.columns = ['Doc_2019_No03_+20percent since June 2019 (1)_N']
+Fourteenth.reset_index(inplace=True)
+Fourteenth["Doc_2019_No03_+20percent since June 2019 (1)_tariff"] = 20
+Fourteenth["Doc_2019_No03_+20percent since June 2019 (1)_sumtariff"] = Fourteenth["Doc_2019_No03_+20percent since June 2019 (1)_N"]*Fourteenth["Doc_2019_No03_+20percent since June 2019 (1)_tariff"]
+
+merged_df = pd.merge(left=merged_df, right=Fourteenth, how='outer', left_on='Product_HS6', right_on='Doc_2019_No03_+20percent since June 2019 (1)')
+merged_df["Doc_2019_No03_+20percent since June 2019 (1)_average"] = merged_df["Doc_2019_No03_+20percent since June 2019 (1)_sumtariff"]/merged_df['TotalTariffLines']
+
+Fifteenth = df.pivot_table(index=['Doc_2019_No03_+25percent since June 2019 (1)'], aggfunc='size')
+Fifteenth = pd.DataFrame(Fifteenth)
+Fifteenth.columns = ['Doc_2019_No03_+25percent since June 2019 (1)_N']
+Fifteenth.reset_index(inplace=True)
+Fifteenth["Doc_2019_No03_+25percent since June 2019 (1)_tariff"] = 25
+Fifteenth["Doc_2019_No03_+25percent since June 2019 (1)_sumtariff"] = Fifteenth["Doc_2019_No03_+25percent since June 2019 (1)_N"]*Fifteenth["Doc_2019_No03_+25percent since June 2019 (1)_tariff"]
+
+merged_df = pd.merge(left=merged_df, right=Fifteenth, how='outer', left_on='Product_HS6', right_on='Doc_2019_No03_+25percent since June 2019 (1)')
+merged_df["Doc_2019_No03_+25percent since June 2019 (1)_average"] = merged_df["Doc_2019_No03_+25percent since June 2019 (1)_sumtariff"]/merged_df['TotalTariffLines']
+
+Sixteenth = df.pivot_table(index=['Doc_2019_No04 + 2020_No01_I+II (+5% since Feb 14 2020)'], aggfunc='size')
+Sixteenth = pd.DataFrame(Sixteenth)
+Sixteenth.columns = ['Doc_2019_No04 + 2020_No01_I+II (+5% since Feb 14 2020)_N']
+Sixteenth.reset_index(inplace=True)
+Sixteenth["Doc_2019_No04 + 2020_No01_I+II (+5% since Feb 14 2020)_tariff"] = 5
+Sixteenth["Doc_2019_No04 + 2020_No01_I+II (+5% since Feb 14 2020)_sumtariff"] = Sixteenth["Doc_2019_No04 + 2020_No01_I+II (+5% since Feb 14 2020)_N"]*Sixteenth["Doc_2019_No04 + 2020_No01_I+II (+5% since Feb 14 2020)_tariff"]
+
+merged_df = pd.merge(left=merged_df, right=Sixteenth, how='outer', left_on='Product_HS6', right_on='Doc_2019_No04 + 2020_No01_I+II (+5% since Feb 14 2020)')
+merged_df["Doc_2019_No04 + 2020_No01_I+II (+5% since Feb 14 2020)_average"] = merged_df["Doc_2019_No04 + 2020_No01_I+II (+5% since Feb 14 2020)_sumtariff"]/merged_df['TotalTariffLines']
+
+Seventeenth = df.pivot_table(index=['Doc_2019_No04 + 2020_No01_III+IV (+2.5% since Feb 14 2020)'], aggfunc='size')
+Seventeenth = pd.DataFrame(Seventeenth)
+Seventeenth.columns = ['Doc_2019_No04 + 2020_No01_III+IV (+2.5% since Feb 14 2020)_N']
+Seventeenth.reset_index(inplace=True)
+Seventeenth["Doc_2019_No04 + 2020_No01_III+IV (+2.5% since Feb 14 2020)_tariff"] = 2.5
+Seventeenth["Doc_2019_No04 + 2020_No01_III+IV (+2.5% since Feb 14 2020)_sumtariff"] = Seventeenth["Doc_2019_No04 + 2020_No01_III+IV (+2.5% since Feb 14 2020)_N"]*Seventeenth["Doc_2019_No04 + 2020_No01_III+IV (+2.5% since Feb 14 2020)_tariff"]
+
+merged_df = pd.merge(left=merged_df, right=Seventeenth, how='outer', left_on='Product_HS6', right_on='Doc_2019_No04 + 2020_No01_III+IV (+2.5% since Feb 14 2020)')
+merged_df["Doc_2019_No04 + 2020_No01_III+IV (+2.5% since Feb 14 2020)_average"] = merged_df["Doc_2019_No04 + 2020_No01_III+IV (+2.5% since Feb 14 2020)_sumtariff"]/merged_df['TotalTariffLines']
+
+Eighteenth = df.pivot_table(index=['Doc_2019_No04+No07_I+II (+10percent) not in force'], aggfunc='size')
+Eighteenth = pd.DataFrame(Eighteenth)
+Eighteenth.columns = ['Doc_2019_No04+No07_I+II (+10percent) not in force_N']
+Eighteenth.reset_index(inplace=True)
+Eighteenth["Doc_2019_No04+No07_I+II (+10percent) not in force_tariff"] = 10
+Eighteenth["Doc_2019_No04+No07_I+II (+10percent) not in force_sumtariff"] = Eighteenth["Doc_2019_No04+No07_I+II (+10percent) not in force_N"]*Eighteenth["Doc_2019_No04+No07_I+II (+10percent) not in force_tariff"]
+
+merged_df = pd.merge(left=merged_df, right=Eighteenth, how='outer', left_on='Product_HS6', right_on='Doc_2019_No04+No07_I+II (+10percent) not in force')
+merged_df["Doc_2019_No04+No07_I+II (+10percent) not in force_average"] = merged_df["Doc_2019_No04+No07_I+II (+10percent) not in force_sumtariff"]/merged_df['TotalTariffLines']
+
+Nineteenth = df.pivot_table(index=['Doc_2019_No04+No07_III+IV (+5) not in force (2)'], aggfunc='size')
+Nineteenth = pd.DataFrame(Nineteenth)
+Nineteenth.columns = ['Doc_2019_No04+No07_III+IV (+5) not in force (2)_N']
+Nineteenth.reset_index(inplace=True)
+Nineteenth["Doc_2019_No04+No07_III+IV (+5) not in force (2)_tariff"] = 5
+Nineteenth["Doc_2019_No04+No07_III+IV (+5) not in force (2)_sumtariff"] = Nineteenth["Doc_2019_No04+No07_III+IV (+5) not in force (2)_N"]*Nineteenth["Doc_2019_No04+No07_III+IV (+5) not in force (2)_tariff"]
+
+merged_df = pd.merge(left=merged_df, right=Nineteenth, how='outer', left_on='Product_HS6', right_on='Doc_2019_No04+No07_III+IV (+5) not in force (2)')
+merged_df["Doc_2019_No04+No07_III+IV (+5) not in force (2)_average"] = merged_df["Doc_2019_No04+No07_III+IV (+5) not in force (2)_sumtariff"]/merged_df['TotalTariffLines']
+
+Doc_2019_No06_1_stop additional tariffs_for one yr from 17.09.2019 to 16.09.2020
