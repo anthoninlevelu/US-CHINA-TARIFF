@@ -195,4 +195,12 @@ Nineteenth["Doc_2019_No04+No07_III+IV (+5) not in force (2)_sumtariff"] = Ninete
 merged_df = pd.merge(left=merged_df, right=Nineteenth, how='outer', left_on='Product_HS6', right_on='Doc_2019_No04+No07_III+IV (+5) not in force (2)')
 merged_df["Doc_2019_No04+No07_III+IV (+5) not in force (2)_average"] = merged_df["Doc_2019_No04+No07_III+IV (+5) not in force (2)_sumtariff"]/merged_df['TotalTariffLines']
 
-Doc_2019_No06_1_stop additional tariffs_for one yr from 17.09.2019 to 16.09.2020
+
+Twentieth = df.pivot_table(index=['Doc_2019_No06_1_stop additional tariffs_for one yr from 17.09.2019 to 16.09.2020'], aggfunc='size')
+Twentieth = pd.DataFrame(Twentieth)
+Twentieth.columns = ['Doc_2019_No06_1_stop additional tariffs_for one yr from 17.09.2019 to 16.09.2020_N']
+Twentieth.reset_index(inplace=True)
+Twentieth["Doc_2019_No06_1_stop additional tariffs_for one yr from 17.09.2019 to 16.09.2020_tariff"] = "x"
+
+merged_df = pd.merge(left=merged_df, right=Twentieth, how='outer', left_on='Product_HS6', right_on='Doc_2019_No06_1_stop additional tariffs_for one yr from 17.09.2019 to 16.09.2020')
+
